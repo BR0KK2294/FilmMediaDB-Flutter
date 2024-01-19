@@ -3,8 +3,8 @@ import 'package:filmmediadb/src/utils/format.dart';
 import 'package:flutter/material.dart';
 
 import '../settings/settings_view.dart';
-import 'movie_item.dart';
-import 'movie_item_details_view.dart';
+import '../models/movie_item.dart';
+import 'movie_details_view.dart';
 
 class MovieItemListView extends StatefulWidget {
   const MovieItemListView({
@@ -81,7 +81,8 @@ class _MovieItemListViewState extends State<MovieItemListView>{
       onTap: () {
               Navigator.restorablePushNamed(
                 context,
-                MovieItemDetailsView.routeName,
+                MovieDetailsView.routeName,
+                arguments: item.id,
               );
             },
       child: SizedBox(

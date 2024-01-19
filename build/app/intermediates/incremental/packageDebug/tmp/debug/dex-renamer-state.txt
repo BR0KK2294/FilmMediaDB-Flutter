@@ -1,4 +1,4 @@
-#Fri Jan 19 13:54:25 CLST 2024
+#Fri Jan 19 17:59:38 CLST 2024
 base.0=/Users/hfsolutions/Development/local-Projects/FilmMediaDB-Flutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

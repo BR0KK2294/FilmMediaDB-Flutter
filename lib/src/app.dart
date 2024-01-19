@@ -1,4 +1,4 @@
-import 'package:filmmediadb/src/movies/movie_item_details_view.dart';
+import 'package:filmmediadb/src/movies/movie_details_view.dart';
 import 'package:filmmediadb/src/movies/movie_item_list_view.dart';
 import 'package:filmmediadb/src/settings/settings_controller.dart';
 import 'package:filmmediadb/src/settings/settings_view.dart';
@@ -66,8 +66,8 @@ class FilmMediaDB extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case MovieItemDetailsView.routeName:
-                    return const MovieItemDetailsView();
+                  case MovieDetailsView.routeName:
+                    return MovieDetailsView(movieId: int.parse(routeSettings.arguments.toString()));
                   case MovieItemListView.routeName:
                   default:
                     return const MovieItemListView();
