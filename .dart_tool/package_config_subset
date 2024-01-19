@@ -26,6 +26,10 @@ flutter_lints
 2.19
 file:///Users/hfsolutions/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3/
 file:///Users/hfsolutions/.pub-cache/hosted/pub.dev/flutter_lints-2.0.3/lib/
+intl
+2.12
+file:///Users/hfsolutions/.pub-cache/hosted/pub.dev/intl-0.18.1/
+file:///Users/hfsolutions/.pub-cache/hosted/pub.dev/intl-0.18.1/lib/
 lints
 3.0
 file:///Users/hfsolutions/.pub-cache/hosted/pub.dev/lints-2.1.1/
@@ -86,6 +90,10 @@ flutter
 3.0
 file:///Users/hfsolutions/Development/flutter/packages/flutter/
 file:///Users/hfsolutions/Development/flutter/packages/flutter/lib/
+flutter_localizations
+3.0
+file:///Users/hfsolutions/Development/flutter/packages/flutter_localizations/
+file:///Users/hfsolutions/Development/flutter/packages/flutter_localizations/lib/
 flutter_test
 3.0
 file:///Users/hfsolutions/Development/flutter/packages/flutter_test/
