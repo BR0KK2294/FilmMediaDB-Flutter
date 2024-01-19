@@ -1,11 +1,25 @@
 # FilmMediaDB-Flutter
 
-Flutter version:
-Flutter 3.13.5 • channel [user-branch] • unknown source
-Framework • revision 12fccda598 (hace 4 meses) • 2023-09-19 13:56:11 -0700
-Engine • revision bd986c5ed2
-Tools • Dart 3.1.2 • DevTools 2.25.0
+Proyecto generado para la prueba técnica de Equifax.
+
+Se desea contar con una aplicación que permita:
+- Obtener el listado de películas y/o series ordenadas por Popularidad y Evaluación
+- Poder acceder a los detalles de la Película y/o Serie
+- Buscar series por nombre
 
 
-comandos utilizados:
-flutter pub get  
+## Deployment
+
+Para desplegar este proyecto se debe contar con las siguientes especificaciones:
+```bash
+Flutter version: Flutter 3.13.5 • Dart 3.1.2 • DevTools 2.25.0
+```
+luego se debe ejecutar los siguientes comandos
+```bash
+flutter pub get
+```
+una vez obtenidas las dependencias se debe ejecutar 
+```bash
+flutter run
+```
+y seleccionar tu emulador favorito
