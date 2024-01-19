@@ -1,3 +1,4 @@
+import 'package:filmmediadb/src/core/http_service.dart';
 import 'package:filmmediadb/src/utils/format.dart';
 import 'package:flutter/material.dart';
 
@@ -24,16 +25,16 @@ class _MovieItemListViewState extends State<MovieItemListView>{
   @override
   void initState() {
     super.initState();
-
+    items = List.empty();
+    _getMovies();
     //testing items;
-    items = [MovieItem(1, "Avengers", DateTime.now(), 6.8, "imgPoster")];
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sample Items'),
+        title: const Text('Film Media DB'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -44,14 +45,33 @@ class _MovieItemListViewState extends State<MovieItemListView>{
         ],
       ),
 
-      body: ListView.builder(
-        restorationId: 'sampleItemListView',
-        itemCount: items.length,
-        itemBuilder: (BuildContext context, int index) {
-          final item = items[index];
-
-          return movieCard(item);
-        },
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 200,
+            child: Column(
+              children: [
+                Text("Find your movies"),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Search Here"
+                  ),
+                )
+              ],
+            ),       
+          ),
+          Expanded(
+            child: ListView.builder(
+              restorationId: 'sampleItemListView',
+              itemCount: items.length,
+              itemBuilder: (BuildContext context, int index) {
+                final item = items[index];
+          
+                return movieCard(item);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -71,8 +91,8 @@ class _MovieItemListViewState extends State<MovieItemListView>{
               width: 95,
               height: 120,
               decoration: ShapeDecoration(
-                image: const DecorationImage(
-                  image: NetworkImage("https://via.placeholder.com/95x120"),
+                image: DecorationImage(
+                  image: NetworkImage("https://image.tmdb.org/t/p/w500${item.imgPoster}"),
                   fit: BoxFit.fill,
                 ),
                 shape: RoundedRectangleBorder(
@@ -96,4 +116,12 @@ class _MovieItemListViewState extends State<MovieItemListView>{
       ),
     );
   }
+
+  _getMovies() async{
+    HTTPService().fetchMovies().then((response) {
+      setState(() {
+        items = response;
+      });
+    });
+	}
 }

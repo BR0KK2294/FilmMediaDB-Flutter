@@ -26,11 +26,11 @@ class MovieItem {
   double voteAverage;
   String imgPoster;
 
-  fromJSON(json){
-    id = json["id"];
-    title = json["title"];
-    releaseDate = json["release_date"];
-    voteAverage = json["vote_average"];
+  MovieItem.fromJSON(json):
+    id = json["id"],
+    title = json["title"],
+    releaseDate = DateTime.parse(json["release_date"]),
+    voteAverage = json["vote_average"],
     imgPoster = json["poster_path"];
-  }
+  
 }
